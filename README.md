@@ -12,7 +12,7 @@ These packages are licensed under CC0.
 
 4次元座標（と法線・閾値）を持つメッシュを3次元投影で表示し、ボーン位置を入力として回転させるシェーダーです。
 
-`PolychoralAccessory.prefab`には、VRChatアバターの手の上に表示するためのPhysBone、Modular Avatar及びAvatar Menu Creator for MA設定が含まれます。
+`PolychoralAccessory.prefab`には、VRChatアバターの手の上に表示するためのPhysBone、[Modular Avatar](https://modular-avatar.nadena.dev/ja/)及び[Avatar Menu Creator for MA](https://avatar-menu-creator-for-ma.vrchat.narazaka.net/)設定が含まれます。
 `PolyhedralAccessory.prefab`は、多面体の2次元投影の表示のためにPhysBoneの挙動を制限したものです。
 
 [こちらのワールド](https://vrchat.com/home/world/wrld_29bde305-ffb9-4b22-8369-1eccf7316fae)にサンプルアバターがあります。
