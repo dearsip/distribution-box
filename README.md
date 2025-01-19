@@ -16,3 +16,21 @@ These packages are licensed under CC0.
 `PolyhedralAccessory.prefab`は、多面体の2次元投影の表示のためにPhysBoneの挙動を制限したものです。
 
 [こちらのワールド](https://vrchat.com/home/world/wrld_29bde305-ffb9-4b22-8369-1eccf7316fae)にサンプルアバターがあります。
+
+## Polychora Viewer
+
+![Screenshot](images/viewer.jpg)
+
+VRChatワールドで4次元多胞体を描画するためのアセットです。モーションコントローラと設定ウィンドウが付属しており、ワールド内で回転操作や描画スタイル変更等ができます。状態は同期されます。
+
+PC及びAndroid（Quest3以外未検証）に対応していますが、対応のためにはマテリアルが参照するシェーダーを変更する必要があります。[EasyQuestSwitch](https://github.com/vrchat-community/EasyQuestSwitch)の利用を推奨します。
+
+| マテリアル | シェーダー (PC) | シェーダー (Android) |
+| ---- | ---- | ---- |
+| CalcDisplay | Face | FaceQuest |
+| CalcEdge | Edge | EdgeQuest |
+| Line | Line | EdgeQuest |
+
+図形の情報は現状スクリプトに直接書き込まれており、プレハブの`Shape Num`で指定します。0～5が4次元正多胞体、6～10が正多面体（`PolyhedraViewer.prefab`で動作）です。
+
+[上記と同じワールド](https://vrchat.com/home/world/wrld_29bde305-ffb9-4b22-8369-1eccf7316fae)に設置しています。
