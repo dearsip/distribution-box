@@ -15,6 +15,8 @@ These packages are licensed under CC0.
 `PolychoralAccessory.prefab`には、VRChatアバターの手の上に表示するためのPhysBone、[Modular Avatar](https://modular-avatar.nadena.dev/ja/)及び[Avatar Menu Creator for MA](https://avatar-menu-creator-for-ma.vrchat.narazaka.net/)設定が含まれます。
 `PolyhedralAccessory.prefab`は、多面体の2次元投影の表示のためにPhysBoneの挙動を制限したものです。
 
+アルファベットと数字の組からなるメッシュ及びマテリアルは、その表記が表す対称性に基づき一つの頂点座標から多胞体を生成するもので、ボーン位置を回転の代わりに頂点座標に割り当てています。
+
 [こちらのワールド](https://vrchat.com/home/world/wrld_29bde305-ffb9-4b22-8369-1eccf7316fae)にサンプルアバターがあります。
 
 ## Polychora Viewer
@@ -32,5 +34,7 @@ PC及びAndroid（Quest3以外未検証）に対応していますが、対応�
 | Line | Line | EdgeQuest |
 
 図形の情報は現状スクリプトに直接書き込まれており、プレハブの`Shape Num`で指定します。0～5が4次元正多胞体、6～10が正多面体（`PolyhedraViewer.prefab`で動作）です。
+
+上記と同じく、アルファベットと数字の組からなるメッシュ及びマテリアルは頂点座標の変更に対応し、設定ウィンドウの反対側に表示される三角形または四面体に沿って白球を動かすことで、頂点座標を変更できます。こちらは現在色の変更及び同期には対応していません。
 
 [上記と同じワールド](https://vrchat.com/home/world/wrld_29bde305-ffb9-4b22-8369-1eccf7316fae)に設置しています。
