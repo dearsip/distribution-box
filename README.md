@@ -38,3 +38,16 @@ PC及びAndroid（Quest3以外未検証）に対応していますが、対応�
 上記と同じく、アルファベットと数字の組からなるメッシュ及びマテリアルは頂点座標の変更に対応し、設定ウィンドウの反対側に表示される三角形または四面体に沿って白球を動かすことで、頂点座標を変更できます。こちらは現在色の変更及び同期には対応していません。
 
 [上記と同じワールド](https://vrchat.com/home/world/wrld_29bde305-ffb9-4b22-8369-1eccf7316fae)に設置しています。
+
+## 4D SDF Slice Stacker
+
+![Screenshot](images/4S3.jpg)
+
+4変数の陰関数（特に符号付き距離関数: Signed Distance Function, SDF）で表された3次元超曲面を、格子状に並んだ2次元平面との交差として描画するシェーダーです。
+
+`4S3_Grabbable.prefab`には、Polychoral Accessoryと同様に、VRChatアバターの手の上に表示し掴んで回転させるためのPhysBone、[Modular Avatar](https://modular-avatar.nadena.dev/ja/)設定が含まれます。
+`4S3_Static.prefab`は、デスクトップでの表示などを想定してPhysBone設定を除いたものです。
+
+`4S3_Grabbable.material`を適用したオブジェクトが複数重なった場合、どちらか一方しか描画が行われません。この問題は`4S3_Grabbable.shader`内の`Stencil`ブロックを削除することで解消できますが、代わりにひとつのオブジェクトで複数回の描画が行われ、描画負荷が倍加する可能性が生じます。`Cull Off`コマンドを`Cull Front`または`Cull Back`に書き換えることで複数回の描画は行われなくなりますが、描画が遮蔽されやすくなります。
+
+[こちらのワールド](https://vrchat.com/home/world/wrld_08c252c2-fc4f-441f-93bc-c583e4054dca)に設定項目の説明及びサンプルアバターがあります。
