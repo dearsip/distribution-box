@@ -48,6 +48,6 @@ PC及びAndroid（Quest3以外未検証）に対応していますが、対応�
 `4S3_Grabbable.prefab`には、Polychoral Accessoryと同様に、VRChatアバターの手の上に表示し掴んで回転させるためのPhysBone、[Modular Avatar](https://modular-avatar.nadena.dev/ja/)設定が含まれます。
 `4S3_Static.prefab`は、デスクトップでの表示などを想定してPhysBone設定を除いたものです。
 
-`4S3_Grabbable.material`を適用したオブジェクトが複数重なった場合、どちらか一方しか描画が行われません。この問題は`4S3_Grabbable.shader`内の`Stencil`ブロックを削除することで解消できますが、代わりにひとつのオブジェクトで複数回の描画が行われ、描画負荷が倍加する可能性が生じます。`Cull Off`コマンドを`Cull Front`または`Cull Back`に書き換えることで複数回の描画は行われなくなりますが、描画が遮蔽されやすくなります。
-
 [こちらのワールド](https://vrchat.com/home/world/wrld_08c252c2-fc4f-441f-93bc-c583e4054dca)に設定項目の説明及びサンプルアバターがあります。
+
+`4S3_Presets.prefab`および`4S3_Custom.prefab`は、関連するExpressions Menuを追加するためのアセットです。`4S3_Presets.prefab`では、上記ワールドの展示を再現した設定を纏めています。`4S3_Custom.prefab`では、ほぼ全ての設定項目を編集できます。使用には[Avatar Menu Creator for MA](https://avatar-menu-creator-for-ma.vrchat.narazaka.net/)が必要です。両者を同時に使用することはできません。
