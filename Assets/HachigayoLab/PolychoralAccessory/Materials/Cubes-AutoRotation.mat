@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Cubes-AutoRotation
+  m_Shader: {fileID: 4800000, guid: 435aee5951282c04d978e6acc64efeac, type: 3}
+  m_Parent: {fileID: 2100000, guid: 98a8b18fb5b478140b0e4eea798c28ec, type: 2}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _AutoRot1Speed: 0.3
+    - _AutoRot2Speed: 0.3
+    m_Colors:
+    - _AutoRot1From: {r: 0, g: 0, b: 0, a: 1}
+    - _AutoRot1To: {r: 0.57735026, g: 0.57735026, b: 0.57735026, a: 0}
+    - _AutoRot2From: {r: 0.70710677, g: 0, b: -0.7071068, a: 0}
+    - _AutoRot2To: {r: -0.40824828, g: 0.8164966, b: -0.4082483, a: 0}
+  m_BuildTextureStacks: []

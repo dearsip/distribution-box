@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: B3
+  m_Shader: {fileID: 4800000, guid: 01c0f5950c0022248b5b81d29bc79cb4, type: 3}
+  m_Parent: {fileID: 2100000, guid: 59f37a9bc2934734385761ad04d7eeb9, type: 2}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _AutoRot1Speed: 0.3
+    - _Scale: 0.08
+    m_Colors:
+    - _AutoRot1From: {r: 0, g: 0, b: 0, a: 1}
+    - _AutoRot1To: {r: 0.70710677, g: 0.70710677, b: 0, a: 0}
+    - _InitialRotation1: {r: 0.7071068, g: -0.4082483, b: 0, a: 0.57735026}
+    - _InitialRotation2: {r: 0, g: 0.8164966, b: 0, a: 0.57735026}
+    - _InitialRotation4: {r: -0.7071068, g: -0.40824834, b: 0, a: 0.57735026}
+    - _Root1: {r: 0.5773503, g: -0.5773503, b: 0, a: -0.5773503}
+    - _Root2: {r: 0, g: -0.7071068, b: 0, a: -0.7071068}
+    - _Root4: {r: 0, g: 0, b: 0, a: -1}
+    - _Vertex: {r: 0.49, g: -0.73, b: 0, a: -1}
+  m_BuildTextureStacks: []

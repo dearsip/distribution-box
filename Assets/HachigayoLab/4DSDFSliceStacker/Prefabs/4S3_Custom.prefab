@@ -1,0 +1,5601 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &215983567887442275
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5246705628143108788}
+  - component: {fileID: 1016467261146584207}
+  m_Layer: 0
+  m_Name: ShapeXW
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5246705628143108788
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215983567887442275}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8331090996167162065}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1016467261146584207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215983567887442275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      - 4S3_Static
+      keys2:
+      - _ObjectRotXW
+      - _ObjectRotXW
+      values:
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.5
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &322414722941845557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 773752926698560562}
+  - component: {fileID: 4353857803348406922}
+  m_Layer: 0
+  m_Name: Stereo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &773752926698560562
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322414722941845557}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8578189738397784754}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4353857803348406922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322414722941845557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c267e6edf81d843a4178a7a739e4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarToggleMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    ToggleObjects:
+      keys:
+      - 4S3_Static
+      values: 01000000
+    ToggleObjectUsings:
+      keys: []
+      values: 
+    ToggleObjectTransitionUsings:
+      keys: []
+      values: 
+    ToggleMaterials:
+      keys1: []
+      keys2: 
+      values: []
+    ToggleBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    ToggleShaderParameters:
+      keys1:
+      - 4S3_Static
+      keys2:
+      - _Stereo
+      values:
+      - Inactive: 0
+        Active: 1
+        TransitionOffsetPercent: 0
+        TransitionDurationPercent: 100
+        OmitInactive: 0
+        OmitActive: 0
+        OmitTransitionToInactive: 0
+        OmitTransitionToActive: 0
+    ToggleShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    ToggleValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    SkipTransitionIfAllOmitted: 1
+    ToggleDefaultValue: 1
+    ToggleIcon: {fileID: 0}
+--- !u!1 &513680712875249226
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5517256650379209937}
+  - component: {fileID: 2057244871909577930}
+  m_Layer: 0
+  m_Name: ShapeYZ
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5517256650379209937
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513680712875249226}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8331090996167162065}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2057244871909577930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513680712875249226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Static
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      keys2:
+      - _ObjectRotYZ
+      - _ObjectRotYZ
+      values:
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.5
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &527713320620864939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8622304341220330584}
+  - component: {fileID: 1945515764926170846}
+  m_Layer: 0
+  m_Name: r1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8622304341220330584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527713320620864939}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4223579469841703754}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1945515764926170846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527713320620864939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Static
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      keys2:
+      - _R1
+      - _R1
+      values:
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.9
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &606009282839547872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4365707530820183275}
+  - component: {fileID: 2935910498819025779}
+  m_Layer: 0
+  m_Name: SpeedW
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4365707530820183275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606009282839547872}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1373002965096930146}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2935910498819025779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606009282839547872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Static
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      keys2:
+      - _SlideSpeed1
+      - _SlideSpeed1
+      values:
+      - Start: -1
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: -1
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.6
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &1003855064619047042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4069459777758801966}
+  - component: {fileID: 2295600349891890026}
+  m_Layer: 0
+  m_Name: ay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4069459777758801966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003855064619047042}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 899561042573850593}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2295600349891890026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003855064619047042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Static
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      keys2:
+      - _Ay
+      - _Ay
+      values:
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 1
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &1054031555365534371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1803955755047394324}
+  - component: {fileID: 1825235543965869029}
+  m_Layer: 0
+  m_Name: Params
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1803955755047394324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054031555365534371}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 899561042573850593}
+  - {fileID: 2906959197646880169}
+  - {fileID: 4223579469841703754}
+  m_Father: {fileID: 9009652296255800464}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1825235543965869029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054031555365534371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b29d45007c5493d926d2cd45a489529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Control:
+    name: 
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  MenuSource: 1
+  menuSource_otherObjectChildren: {fileID: 0}
+  isSynced: 1
+  isSaved: 1
+  isDefault: 0
+  automaticValue: 1
+  label: 
+--- !u!1 &1207113593934563718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5056933843750256573}
+  - component: {fileID: 6164657294385016811}
+  m_Layer: 0
+  m_Name: Back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5056933843750256573
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207113593934563718}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1652984201377650016}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6164657294385016811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207113593934563718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      - 4S3_Static
+      keys2:
+      - _Back
+      - _Back
+      values:
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.7
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &1319814306988817050
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8049191483355581218}
+  - component: {fileID: 7144813408326385700}
+  m_Layer: 0
+  m_Name: Interval
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8049191483355581218
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319814306988817050}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6125339781836243376}
+  - {fileID: 1899076939608817621}
+  m_Father: {fileID: 2260074721393884958}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7144813408326385700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319814306988817050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b29d45007c5493d926d2cd45a489529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Control:
+    name: 
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  MenuSource: 1
+  menuSource_otherObjectChildren: {fileID: 0}
+  isSynced: 1
+  isSaved: 1
+  isDefault: 0
+  automaticValue: 1
+  label: 
+--- !u!1 &1508041981316292914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1652984201377650016}
+  - component: {fileID: 8630977930882758920}
+  m_Layer: 0
+  m_Name: Culling
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1652984201377650016
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508041981316292914}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5056933843750256573}
+  - {fileID: 324573545220670247}
+  - {fileID: 3406253139480344141}
+  m_Father: {fileID: 6972434760770990844}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8630977930882758920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508041981316292914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b29d45007c5493d926d2cd45a489529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Control:
+    name: 
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  MenuSource: 1
+  menuSource_otherObjectChildren: {fileID: 0}
+  isSynced: 1
+  isSaved: 1
+  isDefault: 0
+  automaticValue: 1
+  label: 
+--- !u!1 &1548967008589861531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1373002965096930146}
+  - component: {fileID: 8606779314397032656}
+  m_Layer: 0
+  m_Name: Speed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1373002965096930146
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548967008589861531}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6663865522559890189}
+  - {fileID: 4365707530820183275}
+  m_Father: {fileID: 2260074721393884958}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8606779314397032656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548967008589861531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b29d45007c5493d926d2cd45a489529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Control:
+    name: 
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  MenuSource: 1
+  menuSource_otherObjectChildren: {fileID: 0}
+  isSynced: 1
+  isSaved: 1
+  isDefault: 0
+  automaticValue: 1
+  label: 
+--- !u!1 &1747689602208901892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8331090996167162065}
+  - component: {fileID: 7637489217440305098}
+  m_Layer: 0
+  m_Name: Rotation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8331090996167162065
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747689602208901892}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8792743843775938789}
+  - {fileID: 5517256650379209937}
+  - {fileID: 1178654742879516347}
+  - {fileID: 5246705628143108788}
+  - {fileID: 6427152525336355374}
+  - {fileID: 1259620484732057587}
+  m_Father: {fileID: 9009652296255800464}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7637489217440305098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747689602208901892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b29d45007c5493d926d2cd45a489529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Control:
+    name: 
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  MenuSource: 1
+  menuSource_otherObjectChildren: {fileID: 0}
+  isSynced: 1
+  isSaved: 1
+  isDefault: 0
+  automaticValue: 1
+  label: 
+--- !u!1 &2256127642652596180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5267665759023953533}
+  - component: {fileID: 6824720784728599184}
+  m_Layer: 0
+  m_Name: ax
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5267665759023953533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2256127642652596180}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 899561042573850593}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6824720784728599184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2256127642652596180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Static
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      keys2:
+      - _Ax
+      - _Ax
+      values:
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 1
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &2354117200420237757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2608940168024270769}
+  - component: {fileID: 8037359345065904488}
+  m_Layer: 0
+  m_Name: Volumetric
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2608940168024270769
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2354117200420237757}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6972434760770990844}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8037359345065904488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2354117200420237757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c267e6edf81d843a4178a7a739e4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarToggleMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    ToggleObjects:
+      keys: []
+      values: 
+    ToggleObjectUsings:
+      keys: []
+      values: 
+    ToggleObjectTransitionUsings:
+      keys: []
+      values: 
+    ToggleMaterials:
+      keys1: []
+      keys2: 
+      values: []
+    ToggleBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    ToggleShaderParameters:
+      keys1:
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      - 4S3_Static
+      keys2:
+      - _Volumetric
+      - _Volumetric
+      values:
+      - Inactive: 0
+        Active: 1
+        TransitionOffsetPercent: 0
+        TransitionDurationPercent: 100
+        OmitInactive: 0
+        OmitActive: 0
+        OmitTransitionToInactive: 0
+        OmitTransitionToActive: 0
+      - Inactive: 0
+        Active: 1
+        TransitionOffsetPercent: 0
+        TransitionDurationPercent: 100
+        OmitInactive: 0
+        OmitActive: 0
+        OmitTransitionToInactive: 0
+        OmitTransitionToActive: 0
+    ToggleShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    ToggleValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    SkipTransitionIfAllOmitted: 1
+    ToggleDefaultValue: 0
+    ToggleIcon: {fileID: 0}
+--- !u!1 &2525976429635129966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5994677811950070121}
+  - component: {fileID: 2882236384665935371}
+  m_Layer: 0
+  m_Name: HandGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5994677811950070121
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2525976429635129966}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3224222287781425008}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2882236384665935371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2525976429635129966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c267e6edf81d843a4178a7a739e4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarToggleMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    ToggleObjects:
+      keys: []
+      values: 
+    ToggleObjectUsings:
+      keys: []
+      values: 
+    ToggleObjectTransitionUsings:
+      keys: []
+      values: 
+    ToggleMaterials:
+      keys1: []
+      keys2: 
+      values: []
+    ToggleBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    ToggleShaderParameters:
+      keys1:
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      keys2:
+      - _Global
+      values:
+      - Inactive: 0
+        Active: 1
+        TransitionOffsetPercent: 0
+        TransitionDurationPercent: 100
+        OmitInactive: 0
+        OmitActive: 0
+        OmitTransitionToInactive: 0
+        OmitTransitionToActive: 0
+    ToggleShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    ToggleValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    SkipTransitionIfAllOmitted: 1
+    ToggleDefaultValue: 0
+    ToggleIcon: {fileID: 0}
+--- !u!1 &2674677737549487030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3490104034865686589}
+  - component: {fileID: 933302758513552938}
+  m_Layer: 0
+  m_Name: Scale
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3490104034865686589
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2674677737549487030}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6972434760770990844}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &933302758513552938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2674677737549487030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      - 4S3_Static
+      keys2:
+      - _Frame
+      - _Frame
+      values:
+      - Start: 0
+        End: 0.2
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: 0
+        End: 0.2
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.5
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &2695668570715188337
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9009652296255800464}
+  - component: {fileID: 6779142209061317692}
+  m_Layer: 0
+  m_Name: Shapes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9009652296255800464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2695668570715188337}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7800146903986414847}
+  - {fileID: 105647111686540137}
+  - {fileID: 1803955755047394324}
+  - {fileID: 8331090996167162065}
+  m_Father: {fileID: 3684496251099668893}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6779142209061317692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2695668570715188337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b29d45007c5493d926d2cd45a489529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Control:
+    name: 
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  MenuSource: 1
+  menuSource_otherObjectChildren: {fileID: 0}
+  isSynced: 1
+  isSaved: 1
+  isDefault: 0
+  automaticValue: 1
+  label: 
+--- !u!1 &2871515581238036932
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 179821578386458238}
+  - component: {fileID: 4359027704889205176}
+  m_Layer: 0
+  m_Name: SliceZX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &179821578386458238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2871515581238036932}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5873915363634071190}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4359027704889205176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2871515581238036932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      - 4S3_Static
+      keys2:
+      - _SliceRotZX
+      - _SliceRotZX
+      values:
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.29
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &3041632376774548121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5873915363634071190}
+  - component: {fileID: 8707221772463502336}
+  m_Layer: 0
+  m_Name: Rotaton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5873915363634071190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3041632376774548121}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1260253894668271590}
+  - {fileID: 1673647722787554366}
+  - {fileID: 179821578386458238}
+  - {fileID: 4019402643196146185}
+  - {fileID: 2498772575826838932}
+  - {fileID: 238473654741582964}
+  m_Father: {fileID: 2260074721393884958}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8707221772463502336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3041632376774548121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b29d45007c5493d926d2cd45a489529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Control:
+    name: 
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  MenuSource: 1
+  menuSource_otherObjectChildren: {fileID: 0}
+  isSynced: 1
+  isSaved: 1
+  isDefault: 0
+  automaticValue: 1
+  label: 
+--- !u!1 &3179626451162155068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6104724671326190181}
+  - component: {fileID: 2562730394288925905}
+  m_Layer: 0
+  m_Name: Thickness
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6104724671326190181
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3179626451162155068}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6972434760770990844}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2562730394288925905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3179626451162155068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      - 4S3_Static
+      keys2:
+      - _Thickness
+      - _Thickness
+      values:
+      - Start: 0
+        End: 2
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: 0
+        End: 2
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.5
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &3322453038190355948
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 586363373205035178}
+  - component: {fileID: 7677680933591346457}
+  m_Layer: 0
+  m_Name: r3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &586363373205035178
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3322453038190355948}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4223579469841703754}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7677680933591346457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3322453038190355948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Static
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      keys2:
+      - _R3
+      - _R3
+      values:
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.1
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &3463617393037071672
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6972434760770990844}
+  - component: {fileID: 1590517038703894078}
+  m_Layer: 0
+  m_Name: Others
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6972434760770990844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3463617393037071672}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3490104034865686589}
+  - {fileID: 7147528343009074074}
+  - {fileID: 6104724671326190181}
+  - {fileID: 2608940168024270769}
+  - {fileID: 1652984201377650016}
+  m_Father: {fileID: 3684496251099668893}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1590517038703894078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3463617393037071672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b29d45007c5493d926d2cd45a489529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Control:
+    name: 
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  MenuSource: 1
+  menuSource_otherObjectChildren: {fileID: 0}
+  isSynced: 1
+  isSaved: 1
+  isDefault: 0
+  automaticValue: 1
+  label: 
+--- !u!1 &3931307663835631935
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 172088818331580447}
+  - component: {fileID: 1607117160352375573}
+  m_Layer: 0
+  m_Name: aw
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &172088818331580447
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3931307663835631935}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 899561042573850593}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1607117160352375573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3931307663835631935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      - 4S3_Static
+      keys2:
+      - _Aw
+      - _Aw
+      values:
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 1
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &4002346569681564787
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7147528343009074074}
+  - component: {fileID: 5617479463844696814}
+  m_Layer: 0
+  m_Name: FoV
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7147528343009074074
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4002346569681564787}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6972434760770990844}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5617479463844696814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4002346569681564787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      - 4S3_Static
+      keys2:
+      - _FoV
+      - _FoV
+      values:
+      - Start: 0
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: 0
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.333333
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &4406622667539701408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1259620484732057587}
+  - component: {fileID: 4529600552494239889}
+  m_Layer: 0
+  m_Name: ShapeZW
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1259620484732057587
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4406622667539701408}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8331090996167162065}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4529600552494239889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4406622667539701408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      - 4S3_Static
+      keys2:
+      - _ObjectRotZW
+      - _ObjectRotZW
+      values:
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.5
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &4620129252022826403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2498772575826838932}
+  - component: {fileID: 247419202603234455}
+  m_Layer: 0
+  m_Name: SliceYW
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2498772575826838932
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4620129252022826403}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5873915363634071190}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &247419202603234455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4620129252022826403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Static
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      keys2:
+      - _SliceRotYW
+      - _SliceRotYW
+      values:
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.35
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &4733499041791298178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6187974838973905184}
+  - component: {fileID: 7731865045560100602}
+  m_Layer: 0
+  m_Name: DesktopLocal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6187974838973905184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4733499041791298178}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8578189738397784754}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7731865045560100602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4733499041791298178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c267e6edf81d843a4178a7a739e4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarToggleMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 0
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    ToggleObjects:
+      keys: []
+      values: 
+    ToggleObjectUsings:
+      keys: []
+      values: 
+    ToggleObjectTransitionUsings:
+      keys: []
+      values: 
+    ToggleMaterials:
+      keys1: []
+      keys2: 
+      values: []
+    ToggleBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    ToggleShaderParameters:
+      keys1:
+      - 4S3_Static
+      keys2:
+      - _Local
+      values:
+      - Inactive: 0
+        Active: 1
+        TransitionOffsetPercent: 0
+        TransitionDurationPercent: 100
+        OmitInactive: 0
+        OmitActive: 0
+        OmitTransitionToInactive: 0
+        OmitTransitionToActive: 0
+    ToggleShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    ToggleValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    SkipTransitionIfAllOmitted: 1
+    ToggleDefaultValue: 0
+    ToggleIcon: {fileID: 0}
+--- !u!1 &4746385238456853296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1899076939608817621}
+  - component: {fileID: 544402169800495169}
+  m_Layer: 0
+  m_Name: IntervalW
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1899076939608817621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4746385238456853296}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8049191483355581218}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &544402169800495169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4746385238456853296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Static
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      keys2:
+      - _Stride1
+      - _Stride1
+      values:
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 1
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &4876613476911949667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8578189738397784754}
+  - component: {fileID: 517356270278293616}
+  m_Layer: 0
+  m_Name: Desktop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8578189738397784754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4876613476911949667}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6187974838973905184}
+  - {fileID: 583551263601827431}
+  - {fileID: 773752926698560562}
+  m_Father: {fileID: 201463624894542286}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &517356270278293616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4876613476911949667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b29d45007c5493d926d2cd45a489529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Control:
+    name: 
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  MenuSource: 1
+  menuSource_otherObjectChildren: {fileID: 0}
+  isSynced: 1
+  isSaved: 1
+  isDefault: 0
+  automaticValue: 1
+  label: 
+--- !u!1 &4964070683033636732
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3406253139480344141}
+  - component: {fileID: 3652239541613390021}
+  m_Layer: 0
+  m_Name: Occlusion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3406253139480344141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4964070683033636732}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1652984201377650016}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3652239541613390021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4964070683033636732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      - 4S3_Static
+      keys2:
+      - _Occlusion
+      - _Occlusion
+      values:
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &5100331791347430651
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2906959197646880169}
+  - component: {fileID: 1630583380109709874}
+  m_Layer: 0
+  m_Name: e
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2906959197646880169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5100331791347430651}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2795577948066589820}
+  - {fileID: 8616344981180698508}
+  - {fileID: 7479515182199797984}
+  m_Father: {fileID: 1803955755047394324}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1630583380109709874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5100331791347430651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b29d45007c5493d926d2cd45a489529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Control:
+    name: 
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  MenuSource: 1
+  menuSource_otherObjectChildren: {fileID: 0}
+  isSynced: 1
+  isSaved: 1
+  isDefault: 0
+  automaticValue: 1
+  label: 
+--- !u!1 &5250559517371014236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4019402643196146185}
+  - component: {fileID: 2404952288488125393}
+  m_Layer: 0
+  m_Name: SliceXW
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4019402643196146185
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5250559517371014236}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5873915363634071190}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2404952288488125393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5250559517371014236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      - 4S3_Static
+      keys2:
+      - _SliceRotXW
+      - _SliceRotXW
+      values:
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.5
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &5273953956784864976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7076432059437421706}
+  - component: {fileID: 7224408715848952021}
+  m_Layer: 0
+  m_Name: CountW
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7076432059437421706
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5273953956784864976}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5620077502336222182}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7224408715848952021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5273953956784864976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Static
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      keys2:
+      - _Steps1
+      - _Steps1
+      values:
+      - Start: 0
+        End: 8
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: 0
+        End: 8
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 1
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &5423127808216115843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1673647722787554366}
+  - component: {fileID: 6227288076190055038}
+  m_Layer: 0
+  m_Name: SliceYZ
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1673647722787554366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5423127808216115843}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5873915363634071190}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6227288076190055038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5423127808216115843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      - 4S3_Static
+      keys2:
+      - _SliceRotYZ
+      - _SliceRotYZ
+      values:
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.47
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &5439141669595345800
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1260253894668271590}
+  - component: {fileID: 6942422244435268239}
+  m_Layer: 0
+  m_Name: SliceXY
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1260253894668271590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5439141669595345800}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5873915363634071190}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6942422244435268239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5439141669595345800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      - 4S3_Static
+      keys2:
+      - _SliceRotXY
+      - _SliceRotXY
+      values:
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.5
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &5511505624545388721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7800146903986414847}
+  - component: {fileID: 1569130325987595358}
+  m_Layer: 0
+  m_Name: Select
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7800146903986414847
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5511505624545388721}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9009652296255800464}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1569130325987595358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5511505624545388721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dd4e9b75a0484149be2e2a2993c1a05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarChooseMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    ChooseObjects:
+      keys: []
+      values: []
+    ChooseMaterials:
+      keys1: []
+      keys2: 
+      values: []
+    ChooseBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    ChooseShaderParameters:
+      keys1:
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      - 4S3_Static
+      keys2:
+      - _Shape
+      - _Shape
+      values:
+      - keys: 010000000200000003000000040000000500000006000000
+        values:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+      - keys: 010000000200000003000000040000000500000006000000
+        values:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+        - 6
+    ChooseShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    ChooseValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    ChooseDefaultValue: 0
+    ChooseCount: 7
+    UseCompressed: 0
+    ChooseNames:
+      keys: 00000000010000000200000003000000040000000500000006000000
+      values:
+      - Hypersphere
+      - Spheritorus
+      - Torisphere
+      - Tiger
+      - Ditorus
+      - Spherihyperboloid
+      - Hyperhyperboloid
+    UseParentMenu: 1
+    ChooseParentIcon: {fileID: 0}
+    ChooseIcons:
+      keys: 00000000010000000200000003000000040000000500000006000000
+      values:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+--- !u!1 &6088280271052000683
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3944201544912010214}
+  - component: {fileID: 6671244444752016598}
+  m_Layer: 0
+  m_Name: Offset
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3944201544912010214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6088280271052000683}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 9035091204426745770}
+  - {fileID: 7806433252253219977}
+  m_Father: {fileID: 2260074721393884958}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6671244444752016598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6088280271052000683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b29d45007c5493d926d2cd45a489529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Control:
+    name: 
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  MenuSource: 1
+  menuSource_otherObjectChildren: {fileID: 0}
+  isSynced: 1
+  isSaved: 1
+  isDefault: 0
+  automaticValue: 1
+  label: 
+--- !u!1 &6202772071886701161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3684496251099668893}
+  - component: {fileID: 6667726778734940639}
+  m_Layer: 0
+  m_Name: Settings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3684496251099668893
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6202772071886701161}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 9009652296255800464}
+  - {fileID: 2260074721393884958}
+  - {fileID: 6972434760770990844}
+  m_Father: {fileID: 201463624894542286}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6667726778734940639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6202772071886701161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b29d45007c5493d926d2cd45a489529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Control:
+    name: 
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  MenuSource: 1
+  menuSource_otherObjectChildren: {fileID: 0}
+  isSynced: 1
+  isSaved: 1
+  isDefault: 0
+  automaticValue: 1
+  label: 
+--- !u!1 &6333399455031413216
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 105647111686540137}
+  - component: {fileID: 8215585090903202677}
+  m_Layer: 0
+  m_Name: Custom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &105647111686540137
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6333399455031413216}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9009652296255800464}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8215585090903202677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6333399455031413216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c267e6edf81d843a4178a7a739e4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarToggleMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    ToggleObjects:
+      keys: []
+      values: 
+    ToggleObjectUsings:
+      keys: []
+      values: 
+    ToggleObjectTransitionUsings:
+      keys: []
+      values: 
+    ToggleMaterials:
+      keys1: []
+      keys2: 
+      values: []
+    ToggleBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    ToggleShaderParameters:
+      keys1:
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      - 4S3_Static
+      keys2:
+      - _Custom
+      - _Custom
+      values:
+      - Inactive: 0
+        Active: 7
+        TransitionOffsetPercent: 0
+        TransitionDurationPercent: 100
+        OmitInactive: 0
+        OmitActive: 0
+        OmitTransitionToInactive: 0
+        OmitTransitionToActive: 0
+      - Inactive: 0
+        Active: 7
+        TransitionOffsetPercent: 0
+        TransitionDurationPercent: 100
+        OmitInactive: 0
+        OmitActive: 0
+        OmitTransitionToInactive: 0
+        OmitTransitionToActive: 0
+    ToggleShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    ToggleValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    SkipTransitionIfAllOmitted: 1
+    ToggleDefaultValue: 0
+    ToggleIcon: {fileID: 0}
+--- !u!1 &6422243050019978510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9035091204426745770}
+  - component: {fileID: 4847712486604266681}
+  m_Layer: 0
+  m_Name: OffsetZ
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9035091204426745770
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6422243050019978510}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3944201544912010214}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4847712486604266681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6422243050019978510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Static
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      keys2:
+      - _Offset2
+      - _Offset2
+      values:
+      - Start: -1
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: -1
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.5
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &6581819603490573004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 899561042573850593}
+  - component: {fileID: 7908887474615083103}
+  m_Layer: 0
+  m_Name: a
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &899561042573850593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6581819603490573004}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5267665759023953533}
+  - {fileID: 4069459777758801966}
+  - {fileID: 3740164011692965015}
+  - {fileID: 172088818331580447}
+  m_Father: {fileID: 1803955755047394324}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7908887474615083103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6581819603490573004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b29d45007c5493d926d2cd45a489529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Control:
+    name: 
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  MenuSource: 1
+  menuSource_otherObjectChildren: {fileID: 0}
+  isSynced: 1
+  isSaved: 1
+  isDefault: 0
+  automaticValue: 1
+  label: 
+--- !u!1 &7078406214895400162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6427152525336355374}
+  - component: {fileID: 7714631479462493971}
+  m_Layer: 0
+  m_Name: ShapeYW
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6427152525336355374
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7078406214895400162}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8331090996167162065}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7714631479462493971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7078406214895400162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      - 4S3_Static
+      keys2:
+      - _ObjectRotYW
+      - _ObjectRotYW
+      values:
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.5
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &7277716609876168208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7806433252253219977}
+  - component: {fileID: 6528612404423036585}
+  m_Layer: 0
+  m_Name: OffsetW
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7806433252253219977
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7277716609876168208}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3944201544912010214}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6528612404423036585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7277716609876168208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Static
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      keys2:
+      - _Offset1
+      - _Offset1
+      values:
+      - Start: -1
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: -1
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.5
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &7365927940716362929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 583551263601827431}
+  - component: {fileID: 7017625949619848567}
+  m_Layer: 0
+  m_Name: DesktopGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &583551263601827431
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7365927940716362929}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8578189738397784754}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7017625949619848567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7365927940716362929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c267e6edf81d843a4178a7a739e4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarToggleMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    ToggleObjects:
+      keys: []
+      values: 
+    ToggleObjectUsings:
+      keys: []
+      values: 
+    ToggleObjectTransitionUsings:
+      keys: []
+      values: 
+    ToggleMaterials:
+      keys1: []
+      keys2: 
+      values: []
+    ToggleBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    ToggleShaderParameters:
+      keys1:
+      - 4S3_Static
+      keys2:
+      - _Global
+      values:
+      - Inactive: 0
+        Active: 1
+        TransitionOffsetPercent: 0
+        TransitionDurationPercent: 100
+        OmitInactive: 0
+        OmitActive: 0
+        OmitTransitionToInactive: 0
+        OmitTransitionToActive: 0
+    ToggleShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    ToggleValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    SkipTransitionIfAllOmitted: 1
+    ToggleDefaultValue: 0
+    ToggleIcon: {fileID: 0}
+--- !u!1 &7386123567001228168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4223579469841703754}
+  - component: {fileID: 2030602623476110797}
+  m_Layer: 0
+  m_Name: r
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4223579469841703754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7386123567001228168}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8622304341220330584}
+  - {fileID: 7869000032091183256}
+  - {fileID: 586363373205035178}
+  m_Father: {fileID: 1803955755047394324}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2030602623476110797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7386123567001228168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b29d45007c5493d926d2cd45a489529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Control:
+    name: 
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  MenuSource: 1
+  menuSource_otherObjectChildren: {fileID: 0}
+  isSynced: 1
+  isSaved: 1
+  isDefault: 0
+  automaticValue: 1
+  label: 
+--- !u!1 &7448279983638612186
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1587535656573034453}
+  - component: {fileID: 3873702444419138019}
+  m_Layer: 0
+  m_Name: HandLocal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1587535656573034453
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7448279983638612186}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3224222287781425008}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3873702444419138019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7448279983638612186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c267e6edf81d843a4178a7a739e4ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarToggleMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 0
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    ToggleObjects:
+      keys: []
+      values: 
+    ToggleObjectUsings:
+      keys: []
+      values: 
+    ToggleObjectTransitionUsings:
+      keys: []
+      values: 
+    ToggleMaterials:
+      keys1: []
+      keys2: 
+      values: []
+    ToggleBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    ToggleShaderParameters:
+      keys1:
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      keys2:
+      - _Local
+      values:
+      - Inactive: 0
+        Active: 1
+        TransitionOffsetPercent: 0
+        TransitionDurationPercent: 100
+        OmitInactive: 0
+        OmitActive: 0
+        OmitTransitionToInactive: 0
+        OmitTransitionToActive: 0
+    ToggleShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    ToggleValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    SkipTransitionIfAllOmitted: 1
+    ToggleDefaultValue: 0
+    ToggleIcon: {fileID: 0}
+--- !u!1 &7527393841979110339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2260074721393884958}
+  - component: {fileID: 5424736640032572730}
+  m_Layer: 0
+  m_Name: Slices
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2260074721393884958
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7527393841979110339}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5620077502336222182}
+  - {fileID: 8049191483355581218}
+  - {fileID: 3944201544912010214}
+  - {fileID: 1373002965096930146}
+  - {fileID: 5873915363634071190}
+  m_Father: {fileID: 3684496251099668893}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5424736640032572730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7527393841979110339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b29d45007c5493d926d2cd45a489529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Control:
+    name: 
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  MenuSource: 1
+  menuSource_otherObjectChildren: {fileID: 0}
+  isSynced: 1
+  isSaved: 1
+  isDefault: 0
+  automaticValue: 1
+  label: 
+--- !u!1 &7606045283653354667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6125339781836243376}
+  - component: {fileID: 1815866882723813918}
+  m_Layer: 0
+  m_Name: IntervalZ
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6125339781836243376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7606045283653354667}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8049191483355581218}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1815866882723813918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7606045283653354667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Static
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      keys2:
+      - _Stride2
+      - _Stride2
+      values:
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 1
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &7631332829945329104
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 324573545220670247}
+  - component: {fileID: 2623817832550488386}
+  m_Layer: 0
+  m_Name: Front
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &324573545220670247
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7631332829945329104}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1652984201377650016}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2623817832550488386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7631332829945329104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      - 4S3_Static
+      keys2:
+      - _Front
+      - _Front
+      values:
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &7738596484840679609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 201463624894542286}
+  - component: {fileID: 3927766602292939427}
+  - component: {fileID: 2618321493883009735}
+  m_Layer: 0
+  m_Name: 4S3_Custom
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &201463624894542286
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7738596484840679609}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3224222287781425008}
+  - {fileID: 8578189738397784754}
+  - {fileID: 3684496251099668893}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3927766602292939427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7738596484840679609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b29d45007c5493d926d2cd45a489529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Control:
+    name: 
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  MenuSource: 1
+  menuSource_otherObjectChildren: {fileID: 0}
+  isSynced: 1
+  isSaved: 1
+  isDefault: 0
+  automaticValue: 1
+  label: 
+--- !u!114 &2618321493883009735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7738596484840679609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ef83cb0c23d4d7c9d41021e544a1978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuToAppend: {fileID: 0}
+  installTargetMenu: {fileID: 0}
+--- !u!1 &7756322316833206924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1178654742879516347}
+  - component: {fileID: 1877577617906793594}
+  m_Layer: 0
+  m_Name: ShapeZX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1178654742879516347
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7756322316833206924}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8331090996167162065}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1877577617906793594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7756322316833206924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      - 4S3_Static
+      keys2:
+      - _ObjectRotZX
+      - _ObjectRotZX
+      values:
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.5
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &8229828471272427083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6663865522559890189}
+  - component: {fileID: 1448274055414889930}
+  m_Layer: 0
+  m_Name: SpeedZ
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6663865522559890189
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8229828471272427083}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1373002965096930146}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1448274055414889930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8229828471272427083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Static
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      keys2:
+      - _SlideSpeed2
+      - _SlideSpeed2
+      values:
+      - Start: -1
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: -1
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.55
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &8340391708778340083
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 213991405394508073}
+  - component: {fileID: 3171286506577334323}
+  m_Layer: 0
+  m_Name: CountZ
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &213991405394508073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8340391708778340083}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5620077502336222182}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3171286506577334323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8340391708778340083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Static
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      keys2:
+      - _Steps2
+      - _Steps2
+      values:
+      - Start: 0
+        End: 8
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: 0
+        End: 8
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 1
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &8559840808887968820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8616344981180698508}
+  - component: {fileID: 5393367590620676884}
+  m_Layer: 0
+  m_Name: e2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8616344981180698508
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8559840808887968820}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2906959197646880169}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5393367590620676884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8559840808887968820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      - 4S3_Static
+      keys2:
+      - _E2
+      - _E2
+      values:
+      - Start: 0.01
+        End: 4
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: 0.01
+        End: 4
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.25
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &8675296496709387299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2795577948066589820}
+  - component: {fileID: 6239534982430339631}
+  m_Layer: 0
+  m_Name: e1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2795577948066589820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8675296496709387299}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2906959197646880169}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6239534982430339631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8675296496709387299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      - 4S3_Static
+      keys2:
+      - _E1
+      - _E1
+      values:
+      - Start: 0.01
+        End: 4
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: 0.01
+        End: 4
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.25
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &8701316154851392345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 238473654741582964}
+  - component: {fileID: 8456944991819838824}
+  m_Layer: 0
+  m_Name: SliceZW
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &238473654741582964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8701316154851392345}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5873915363634071190}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8456944991819838824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8701316154851392345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Static
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      keys2:
+      - _SliceRotZW
+      - _SliceRotZW
+      values:
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.5
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &8734419103280844434
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5620077502336222182}
+  - component: {fileID: 1048681021795332808}
+  m_Layer: 0
+  m_Name: Count
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5620077502336222182
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8734419103280844434}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 213991405394508073}
+  - {fileID: 7076432059437421706}
+  m_Father: {fileID: 2260074721393884958}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1048681021795332808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8734419103280844434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b29d45007c5493d926d2cd45a489529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Control:
+    name: 
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  MenuSource: 1
+  menuSource_otherObjectChildren: {fileID: 0}
+  isSynced: 1
+  isSaved: 1
+  isDefault: 0
+  automaticValue: 1
+  label: 
+--- !u!1 &8772604653478321061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8792743843775938789}
+  - component: {fileID: 3214537328746015790}
+  m_Layer: 0
+  m_Name: ShapeXY
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8792743843775938789
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8772604653478321061}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8331090996167162065}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3214537328746015790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8772604653478321061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Static
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      keys2:
+      - _ObjectRotXY
+      - _ObjectRotXY
+      values:
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: -0.5
+        End: 0.5
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.5
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &8819081149777028428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7869000032091183256}
+  - component: {fileID: 400011458627113589}
+  m_Layer: 0
+  m_Name: r2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7869000032091183256
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8819081149777028428}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4223579469841703754}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &400011458627113589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8819081149777028428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Static
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      keys2:
+      - _R2
+      - _R2
+      values:
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.3
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &8841606751547424779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7479515182199797984}
+  - component: {fileID: 8101861629090881639}
+  m_Layer: 0
+  m_Name: e3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7479515182199797984
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8841606751547424779}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2906959197646880169}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8101861629090881639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8841606751547424779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      - 4S3_Static
+      keys2:
+      - _E3
+      - _E3
+      values:
+      - Start: 0.01
+        End: 4
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: 0.01
+        End: 4
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 0.25
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &8979486319446968390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3740164011692965015}
+  - component: {fileID: 2809169926927785547}
+  m_Layer: 0
+  m_Name: az
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3740164011692965015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8979486319446968390}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 899561042573850593}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2809169926927785547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8979486319446968390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ad54914ee159d4a91cade0f89b8dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvatarRadialMenu:
+    IncludeAssetType: 3
+    TransitionSeconds: 0
+    Saved: 1
+    Synced: 1
+    ParameterName: 
+    InternalParameter: 0
+    PhysBoneAutoResetDisabledObjects:
+      values: []
+    RadialBlendShapes:
+      keys1: []
+      keys2: []
+      values: []
+    RadialShaderParameters:
+      keys1:
+      - 4S3_Static
+      - 4S3_Grabbable/PhysboneRoot/ShapeRoot/Shape
+      keys2:
+      - _Az
+      - _Az
+      values:
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+      - Start: 0
+        End: 1
+        StartOffsetPercent: 0
+        EndOffsetPercent: 100
+    RadialShaderVectorParameters:
+      keys1: []
+      keys2: []
+      values: []
+    RadialValues:
+      keys1: []
+      keys2: []
+      values: []
+    Positions:
+      keys: []
+      values: []
+    Rotations:
+      keys: []
+      values: []
+    Scales:
+      keys: []
+      values: []
+    RadialDefaultValue: 1
+    RadialInactiveRange: 0
+    RadialInactiveRangeMin: NaN
+    RadialInactiveRangeMax: NaN
+    RadialIcon: {fileID: 0}
+    LockRemoteDuringChange: 0
+    PreventRemoteFloatBug: 0
+    PreventRemoteFloatBugDuration: 0.8
+--- !u!1 &9057868626946462719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3224222287781425008}
+  - component: {fileID: 5903767513905416175}
+  m_Layer: 0
+  m_Name: Hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3224222287781425008
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9057868626946462719}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1587535656573034453}
+  - {fileID: 5994677811950070121}
+  m_Father: {fileID: 201463624894542286}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5903767513905416175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9057868626946462719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b29d45007c5493d926d2cd45a489529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Control:
+    name: 
+    icon: {fileID: 0}
+    type: 103
+    parameter:
+      name: 
+    value: 1
+    style: 0
+    subMenu: {fileID: 0}
+    subParameters: []
+    labels: []
+  MenuSource: 1
+  menuSource_otherObjectChildren: {fileID: 0}
+  isSynced: 1
+  isSaved: 1
+  isDefault: 0
+  automaticValue: 1
+  label: 
