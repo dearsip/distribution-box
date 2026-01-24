@@ -19,7 +19,7 @@ These packages are licensed under CC0.
 
 アルファベットと数字の組からなるメッシュ及びマテリアルは、その表記が表す対称性に基づき一つの頂点座標から多胞体を生成するもので、ボーン位置を回転の代わりに頂点座標に割り当てています。
 
-[こちらのワールド](https://vrchat.com/home/world/wrld_29bde305-ffb9-4b22-8369-1eccf7316fae)にサンプルアバターがあります。
+[こちらのワールド](https://vrchat.com/home/launch?worldId=wrld_29bde305-ffb9-4b22-8369-1eccf7316fae)にサンプルアバターがあります。
 
 ## Polychora Viewer
 
@@ -41,7 +41,7 @@ PC及びAndroid（Quest3以外未検証）に対応していますが、対応�
 
 上記と同じく、アルファベットと数字の組からなるメッシュ及びマテリアルは頂点座標の変更に対応し、設定ウィンドウの反対側に表示される三角形または四面体に沿って白球を動かすことで、頂点座標を変更できます。こちらは現在色の変更及び同期には対応していません。
 
-[上記と同じワールド](https://vrchat.com/home/world/wrld_29bde305-ffb9-4b22-8369-1eccf7316fae)に設置しています。
+[上記と同じワールド](https://vrchat.com/home/launch?worldId=wrld_29bde305-ffb9-4b22-8369-1eccf7316fae)に設置しています。
 
 ## 4D SDF Slice Stacker
 
@@ -58,7 +58,7 @@ PC及びAndroid（Quest3以外未検証）に対応していますが、対応�
 
 描画にDepthテクスチャを使用するため、リアルタイムシャドウのないワールドでは表示されません。アバターに別途影を生成するライトを追加することで常に描画できるようになります。（[参考資料](https://qiita.com/yuri_tsukimi/items/721c4f49e7228c0865db)）
 
-[こちらのワールド](https://vrchat.com/home/world/wrld_08c252c2-fc4f-441f-93bc-c583e4054dca)に設定項目の説明及びサンプルアバターがあります。
+[こちらのワールド](https://vrchat.com/home/launch?worldId=wrld_08c252c2-fc4f-441f-93bc-c583e4054dca)に設定項目の説明及びサンプルアバターがあります。
 
 ## Floating Tool
 
@@ -71,7 +71,7 @@ PC及びAndroid（Quest3以外未検証）に対応していますが、対応�
 
 [FlyingSystem](https://github.com/phi16/VRC_storage?tab=readme-ov-file#flyingsystem)のスクリプトを参考にしています。
 
-[4D SDF Slice Stacker](https://vrchat.com/home/world/wrld_08c252c2-fc4f-441f-93bc-c583e4054dca)に導入しています。（一部機能の追加があります）
+[4D SDF Slice Stacker](https://vrchat.com/home/launch?worldId=wrld_08c252c2-fc4f-441f-93bc-c583e4054dca)に導入しています。（一部機能の追加があります）
 
 ## UI Sync
 
@@ -86,3 +86,22 @@ uGUIコンポーネント（Toggle、TMP_Dropdown、TMP_InputField、Slider）�
 `Editor/UISyncAutoBinder`は、各コンポーネントにUdonBehaviourがアタッチされたとき、`UdonBehaviour.SendCustomEvent(OnValueChanged)`を自動で追加します。これはコンポーネントの値を同期変数に反映するための処理です。他のUdonBehaviourがアタッチされている場合、意図しない動作をする可能性があります。動作に問題がある場合は、`Editor/UISyncAutoBinder`を削除して自身で追加を行ってください。
 
 VRChatでのuGUIの使用については[ドキュメント](https://creators.vrchat.com/worlds/components/vrc_uishape/)を参照してください。基本的には`UI/Text - TextMeshPro (VRC)`の追加と、各コンポーネントの`Navigation`を`None`にすること（加えてScroll barがある場合は`Scroll Sensitivity`を0にすること）で正常に機能するようになります。Sceneビュー上に表示されるアイコンはSceneビュー右上の"Toggle visibility of all Gizmos in the Scene view"でオフにできます。
+
+## Camera Reflector
+
+[CameraReflector.unitypackage](https://github.com/dearsip/distribution-box/raw/main/CameraReflector.unitypackage)
+
+反転を含むカメラで深度バッファを参照しながらスクリーンを上書きするワールド用ギミックです。（PC Only）
+
+ポリゴンの表裏は反転（鏡映変換）によって入れ替わります。そのため、カメラの変換行列が鏡映変換を含む場合、`GL.invertCulling=true`によって表裏判定を補正する必要があります。しかし、現在のVRChatでは`GL.invertCulling`にアクセスすることができません。代替として、変換行列を反転させてから描画し、描画結果をさらに反転させることで、求める結果を得ることができます。  
+ところで、複数のカメラで同じレンダーターゲットを指定することで、先のカメラの深度バッファを参照しながら後のカメラの描画を重ねることができます。そして、例えば2台のカメラでの描画において後のカメラのみ反転を含む場合、上記の代替手法を適用するには、先のカメラでの描画結果及び深度バッファを後のカメラのために反転させる必要があります。本ギミックはそのような処理を実装したものです。
+
+`CameraReflector.prefab`は、ワールド内のアバターをオブジェクトの位置からz軸方向に反転させて描画します。異なる用途で用いるには`CameraReflector.cs`を編集する必要があります。
+
+- `Camera Count`: 上書きに用いるカメラの総数。
+- `Camera Depth Offset`: このスクリプトで使用するカメラのDepthを設定する。`(cameraCount + 1) * 3`台のカメラが`cameraDepthOffset - (cameraCount + 1) * 3`から`cameraDepthOffset - 1`までのDepthに配置される。いずれのカメラもDepthが負である必要がある。
+- `Integrate Layer`: 使用していないレイヤー（22-30）を一つ指定する。描画結果のスクリーンへの反映に用いる。
+- `Depth Base Layer`: 使用するカメラが共通して描画するレイヤーを一つ指定する。深度バッファの書き込みに用いる。
+- `Photo Resolution`: Photo Cameraに使用するテクスチャの解像度を指定する。`Stream`はStream Cameraの解像度、すなわちウィンドウサイズに対応する。本ギミックの描画結果は標準のPhoto Cameraには映るがその他のカメラや鏡には映らない。また、指定した解像度でのレンダリングはPhoto Cameraを表示している間毎フレーム実行される。
+
+[こちらのワールド](https://vrchat.com/home/launch?worldId=wrld_dc61c604-638c-4832-9136-d7438a823b2e)にサンプルを設置しています。（`CameraReflectorSample.unity`とほぼ同一）
