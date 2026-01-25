@@ -1,5 +1,4 @@
 ﻿
-using TMPro;
 using UdonSharp;
 using UnityEngine;
 using VRC.SDK3.Rendering;
@@ -17,17 +16,18 @@ namespace HachigayoLab.CameraReflector
     public class CameraReflector : UdonSharpBehaviour
     {
         [SerializeField] int cameraCount = 1, cameraDepthOffset = -5, integrateLayer = 22, depthBaseLayer = 18;
-        public PhotoResolutionMode photoResolution;
+        public PhotoResolutionMode PhotoResolution { get => currentPhotoResolution; set { photoChanged = true; currentPhotoResolution = value; } }
+        PhotoResolutionMode currentPhotoResolution;
         [SerializeField] GameObject ReflectorCamera;
         [SerializeField] Material textureFirstwriter, textureOverwriter, depthSampler, depthOverwriter;
         GameObject integratePhoto;
-        RenderTexture textureB, textureL, textureR, textureP, depth0, depth1, depth2;
+        RenderTexture textureB, textureL, textureR, depth0, depth1, depth2, texturePB, textureP, depthP0, depthP1, depthP2;
         Camera refCamera, baseCameraL, baseCameraR, baseCameraP;
         Camera[] cameras;
         Transform baseCameraLTransform, baseCameraRTransform, baseCameraPTransform;
-        bool isUserInVR;
+        bool isUserInVR, screenChanged = true, photoChanged = true;
         bool[] flip;
-        int idMirror, idNumber, idTarget, streamWidth, streamHeight, currentCamera = -2, enabledCameraCount, number;
+        int idMirror, idNumber, idTarget, idTextureB, idDepth0, idDepth1, idDepth2, streamWidth, streamHeight, currentCamera = -2, enabledCameraCount, number, target;
         int[] enabledCameraIndices;
         VRCCameraSettings screenCamera, photoCamera;
         Matrix4x4 projectionL, projectionR, projectionP;
@@ -40,20 +40,25 @@ namespace HachigayoLab.CameraReflector
             photoCamera.DepthTextureMode = DepthTextureMode.Depth;
             isUserInVR = Networking.LocalPlayer.IsUserInVR();
             textureB = new RenderTexture(screenCamera.PixelWidth, screenCamera.PixelHeight, 32);
-            VRCShader.SetGlobalTexture(VRCShader.PropertyToID("_UdonTextureB"), textureB);
+            VRCShader.SetGlobalTexture(idTextureB = VRCShader.PropertyToID("_UdonTextureB"), textureB);
             textureL = new RenderTexture(textureB.descriptor);
             VRCShader.SetGlobalTexture(VRCShader.PropertyToID("_UdonTextureL"), textureL);
             textureR = new RenderTexture(textureL.descriptor);
             VRCShader.SetGlobalTexture(VRCShader.PropertyToID("_UdonTextureR"), textureR);
-            textureP = new RenderTexture(textureL.descriptor);
-            VRCShader.SetGlobalTexture(VRCShader.PropertyToID("_UdonTextureP"), textureP);
             depth0 = new RenderTexture(textureB.descriptor);
             depth0.format = RenderTextureFormat.RFloat;
-            VRCShader.SetGlobalTexture(VRCShader.PropertyToID("_UdonDepth0"), depth0);
+            VRCShader.SetGlobalTexture(idDepth0 = VRCShader.PropertyToID("_UdonDepth0"), depth0);
             depth1 = new RenderTexture(depth0.descriptor);
-            VRCShader.SetGlobalTexture(VRCShader.PropertyToID("_UdonDepth1"), depth1);
+            VRCShader.SetGlobalTexture(idDepth1 = VRCShader.PropertyToID("_UdonDepth1"), depth1);
             depth2 = new RenderTexture(depth0.descriptor);
-            VRCShader.SetGlobalTexture(VRCShader.PropertyToID("_UdonDepth2"), depth2);
+            VRCShader.SetGlobalTexture(idDepth2 = VRCShader.PropertyToID("_UdonDepth2"), depth2);
+            texturePB = new RenderTexture(photoCamera.PixelWidth, photoCamera.PixelHeight, 32);
+            textureP = new RenderTexture(texturePB.descriptor);
+            VRCShader.SetGlobalTexture(VRCShader.PropertyToID("_UdonTextureP"), textureP);
+            depthP0 = new RenderTexture(texturePB.descriptor);
+            depthP0.format = RenderTextureFormat.RFloat;
+            depthP1 = new RenderTexture(depthP0.descriptor);
+            depthP2 = new RenderTexture(depthP0.descriptor);
             idMirror = VRCShader.PropertyToID("_UdonMirror");
             idNumber = VRCShader.PropertyToID("_UdonNumber");
             idTarget = VRCShader.PropertyToID("_UdonTarget");
@@ -149,41 +154,62 @@ namespace HachigayoLab.CameraReflector
                 streamHeight = screenCamera.PixelHeight;
             }
 
-            int w = screenCamera.PixelWidth; int h = screenCamera.PixelHeight;
-            textureB.Release(); textureB.width = w; textureB.height = h; textureB.Create();
-            textureL.Release(); textureL.width = w; textureL.height = h; textureL.Create();
-            textureR.Release(); textureR.width = w; textureR.height = h; textureR.Create();
-            textureP.Release();
-            switch (photoResolution)
+            if (screenChanged)
             {
-                case PhotoResolutionMode._Stream: textureP.width = streamWidth; textureP.height = streamHeight; break;
-                case PhotoResolutionMode._HD: textureP.width = 1280; textureP.height = 720; break;
-                case PhotoResolutionMode._FHD: textureP.width = 1920; textureP.height = 1080; break;
-                case PhotoResolutionMode._2K: textureP.width = 2560; textureP.height = 1440; break;
-                case PhotoResolutionMode._4K: textureP.width = 3840; textureP.height = 2160; break;
-                case PhotoResolutionMode._8K: textureP.width = 7680; textureP.height = 4320; break;
-            }
-            textureP.Create();
-            depth0.Release(); depth0.width = w; depth0.height = h; depth0.Create();
-            depth1.Release(); depth1.width = w; depth1.height = h; depth1.Create();
-            depth2.Release(); depth2.width = w; depth2.height = h; depth2.Create();
+                screenChanged = false;
 
-            refCamera.nearClipPlane = screenCamera.NearClipPlane;
-            refCamera.farClipPlane = screenCamera.FarClipPlane;
-            refCamera.fieldOfView = screenCamera.FieldOfView;
-            baseCameraL.projectionMatrix = projectionL = isUserInVR ? refCamera.GetStereoProjectionMatrix(Camera.StereoscopicEye.Left) : refCamera.projectionMatrix;
-            baseCameraR.projectionMatrix = projectionR = refCamera.GetStereoProjectionMatrix(Camera.StereoscopicEye.Right);
+                int w = screenCamera.PixelWidth; int h = screenCamera.PixelHeight;
+                if (w != textureB.width || h != textureB.height)
+                {
+                    textureB.Release(); textureB.width = w; textureB.height = h; textureB.Create();
+                    textureL.Release(); textureL.width = w; textureL.height = h; textureL.Create();
+                    textureR.Release(); textureR.width = w; textureR.height = h; textureR.Create();
+                    depth0.Release(); depth0.width = w; depth0.height = h; depth0.Create();
+                    depth1.Release(); depth1.width = w; depth1.height = h; depth1.Create();
+                    depth2.Release(); depth2.width = w; depth2.height = h; depth2.Create();
+                }
+
+                refCamera.nearClipPlane = screenCamera.NearClipPlane;
+                refCamera.farClipPlane = screenCamera.FarClipPlane;
+                refCamera.fieldOfView = screenCamera.FieldOfView;
+                baseCameraL.projectionMatrix = projectionL = isUserInVR ? refCamera.GetStereoProjectionMatrix(Camera.StereoscopicEye.Left) : refCamera.projectionMatrix;
+                baseCameraR.projectionMatrix = projectionR = refCamera.GetStereoProjectionMatrix(Camera.StereoscopicEye.Right);
+            }
 
             baseCameraP.enabled = photoCamera.Active;
-            baseCameraP.nearClipPlane = photoCamera.NearClipPlane;
-            baseCameraP.farClipPlane = photoCamera.FarClipPlane;
-            baseCameraP.fieldOfView = photoCamera.FieldOfView;
-            baseCameraP.targetTexture = null;
-            baseCameraP.targetTexture = textureP;
-            projectionP = baseCameraP.projectionMatrix;
-            baseCameraP.cullingMask = photoCamera.CullingMask & ~(1 << integrateLayer);
-            baseCameraP.clearFlags = photoCamera.ClearFlags;
-            baseCameraP.backgroundColor = photoCamera.BackgroundColor;
+            if (photoChanged)
+            {
+                photoChanged = false;
+
+                int w = 0; int h = 0;
+                switch (PhotoResolution)
+                {
+                    case PhotoResolutionMode._Stream: w = streamWidth; h = streamHeight; break;
+                    case PhotoResolutionMode._HD: w = 1280; h = 720; break;
+                    case PhotoResolutionMode._FHD: w = 1920; h = 1080; break;
+                    case PhotoResolutionMode._2K: w = 2560; h = 1440; break;
+                    case PhotoResolutionMode._4K: w = 3840; h = 2160; break;
+                    case PhotoResolutionMode._8K: w = 7680; h = 4320; break;
+                }
+                if (w != texturePB.width || h != texturePB.height)
+                {
+                    texturePB.Release(); texturePB.width = w; texturePB.height = h; texturePB.Create();
+                    textureP.Release(); textureP.width = w; textureP.height = h; textureP.Create();
+                    depthP0.Release(); depthP0.width = w; depthP0.height = h; depthP0.Create();
+                    depthP1.Release(); depthP1.width = w; depthP1.height = h; depthP1.Create();
+                    depthP2.Release(); depthP2.width = w; depthP2.height = h; depthP2.Create();
+                }
+
+                baseCameraP.nearClipPlane = photoCamera.NearClipPlane;
+                baseCameraP.farClipPlane = photoCamera.FarClipPlane;
+                baseCameraP.fieldOfView = photoCamera.FieldOfView;
+                baseCameraP.targetTexture = null;
+                baseCameraP.targetTexture = textureP;
+                projectionP = baseCameraP.projectionMatrix;
+                baseCameraP.cullingMask = photoCamera.CullingMask & ~(1 << integrateLayer);
+                baseCameraP.clearFlags = photoCamera.ClearFlags;
+                baseCameraP.backgroundColor = photoCamera.BackgroundColor;
+            }
 
             enabledCameraCount = 0;
             for (int i = 0; i < cameraCount; i++)
@@ -205,13 +231,17 @@ namespace HachigayoLab.CameraReflector
                 baseCameraR.targetTexture = textureR;
                 baseCameraP.targetTexture = textureP;
             }
-            else baseCameraL.targetTexture = baseCameraR.targetTexture = baseCameraP.targetTexture = textureB;
+            else
+            {
+                baseCameraL.targetTexture = baseCameraR.targetTexture = textureB;
+                baseCameraP.targetTexture = texturePB;
+            }
 
             for (int i = 0; i < enabledCameraCount; i++)
             {
                 cameras[enabledCameraIndices[i + 1] - 1].targetTexture = (enabledCameraCount - i) % 2 == 0 ? textureB : textureL;
                 if (isUserInVR) cameras[enabledCameraIndices[i + 1] - 1 + cameraCount].targetTexture = (enabledCameraCount - i) % 2 == 0 ? textureB : textureR;
-                if (photoCamera.Active) cameras[enabledCameraIndices[i + 1] - 1 + cameraCount * 2].targetTexture = (enabledCameraCount - i) % 2 == 0 ? textureB : textureP;
+                if (photoCamera.Active) cameras[enabledCameraIndices[i + 1] - 1 + cameraCount * 2].targetTexture = (enabledCameraCount - i) % 2 == 0 ? texturePB : textureP;
             }
 
             LayerMask layerMask = photoCamera.CullingMask;
@@ -224,26 +254,26 @@ namespace HachigayoLab.CameraReflector
             {
                 if (t == 0)
                 {
-                    baseCameraLTransform.position = VRCCameraSettings.GetEyePosition(Camera.StereoscopicEye.Left);
-                    baseCameraLTransform.rotation = VRCCameraSettings.GetEyeRotation(Camera.StereoscopicEye.Left);
+                    baseCameraLTransform.SetPositionAndRotation(VRCCameraSettings.GetEyePosition(Camera.StereoscopicEye.Left), VRCCameraSettings.GetEyeRotation(Camera.StereoscopicEye.Left));
                     baseCameraL.cullingMatrix = baseCameraL.projectionMatrix * baseCameraL.worldToCameraMatrix;
-                    baseCameraRTransform.position = VRCCameraSettings.GetEyePosition(Camera.StereoscopicEye.Right);
-                    baseCameraRTransform.rotation = VRCCameraSettings.GetEyeRotation(Camera.StereoscopicEye.Right);
+                    baseCameraRTransform.SetPositionAndRotation(VRCCameraSettings.GetEyePosition(Camera.StereoscopicEye.Right), VRCCameraSettings.GetEyeRotation(Camera.StereoscopicEye.Right));
                     baseCameraR.cullingMatrix = baseCameraR.projectionMatrix * baseCameraR.worldToCameraMatrix;
-                    baseCameraPTransform.position = photoCamera.Position;
-                    baseCameraPTransform.rotation = photoCamera.Rotation;
-                    baseCameraP.cullingMatrix = baseCameraP.projectionMatrix * baseCameraP.worldToCameraMatrix;
+
+                    VRCShader.SetGlobalTexture(idTextureB, textureB);
+                    VRCShader.SetGlobalTexture(idDepth0, depth0);
+                    VRCShader.SetGlobalTexture(idDepth1, depth1);
+                    VRCShader.SetGlobalTexture(idDepth2, depth2);
                 }
 
                 if (t == 2)
                 {
-                    int w = textureP.width; int h = textureP.height;
-                    textureB.Release(); textureB.width = w; textureB.height = h; textureB.Create();
-                    depth0.Release(); depth0.width = w; depth0.height = h; depth0.Create();
-                    depth1.Release(); depth1.width = w; depth1.height = h; depth1.Create();
-                    depth2.Release(); depth2.width = w; depth2.height = h; depth2.Create();
-                    baseCameraP.targetTexture = null;
-                    baseCameraP.targetTexture = enabledCameraCount % 2 == 0 ? textureP : textureB;
+                    baseCameraPTransform.SetPositionAndRotation(photoCamera.Position, photoCamera.Rotation);
+                    baseCameraP.cullingMatrix = baseCameraP.projectionMatrix * baseCameraP.worldToCameraMatrix;
+
+                    VRCShader.SetGlobalTexture(idTextureB, texturePB);
+                    VRCShader.SetGlobalTexture(idDepth0, depthP0);
+                    VRCShader.SetGlobalTexture(idDepth1, depthP1);
+                    VRCShader.SetGlobalTexture(idDepth2, depthP2);
                 }
                 currentCamera = -1;
             }
@@ -264,14 +294,22 @@ namespace HachigayoLab.CameraReflector
 
             VRCShader.SetGlobalFloat(idMirror, flip[enabledCameraIndices[currentCamera + 1]] ^ flip[enabledCameraIndices[currentCamera + 2]] ? 1 : 0);
             VRCShader.SetGlobalFloat(idNumber, number = n == -1 ? -1 : (enabledCameraCount - currentCamera) % 2);
-            VRCShader.SetGlobalFloat(idTarget, t);
+            VRCShader.SetGlobalFloat(idTarget, target = t);
         }
 
         void OnRenderObject()
         {
             if (currentCamera == -2) return;
-            if (currentCamera == -1) VRCGraphics.Blit(null, enabledCameraCount % 2 == 0 ? depth0 : depth1, depthSampler);
-            else VRCGraphics.Blit(null, depth2, depthSampler);
+            if (target < 2)
+            {
+                if (currentCamera == -1) VRCGraphics.Blit(null, enabledCameraCount % 2 == 0 ? depth0 : depth1, depthSampler);
+                else VRCGraphics.Blit(null, depth2, depthSampler);
+            }
+            else
+            {
+                if (currentCamera == -1) VRCGraphics.Blit(null, enabledCameraCount % 2 == 0 ? depthP0 : depthP1, depthSampler);
+                else VRCGraphics.Blit(null, depthP2, depthSampler);
+            }
         }
 
         public void CustomRenderImage(RenderTexture source, RenderTexture destination)
@@ -280,10 +318,17 @@ namespace HachigayoLab.CameraReflector
             else
             {
                 VRCGraphics.Blit(source, destination, textureOverwriter);
-                if (number == 0) VRCGraphics.Blit(source, depth1, depthOverwriter);
-                else VRCGraphics.Blit(source, depth0, depthOverwriter);
+                if (target < 2) VRCGraphics.Blit(source, number == 0 ? depth1 : depth0, depthOverwriter);
+                else VRCGraphics.Blit(source, number == 0 ? depthP1 : depthP0, depthOverwriter);
             }
             if (currentCamera + 1 == enabledCameraCount) VRCShader.SetGlobalFloat(idNumber, currentCamera = -2);
         }
+
+        public override void OnVRCCameraSettingsChanged(VRCCameraSettings cameraSettings)
+        {
+            if (cameraSettings == screenCamera) screenChanged = true;
+            else photoChanged = true;
+        }
+
     }
 }
