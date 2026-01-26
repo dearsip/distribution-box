@@ -11,13 +11,45 @@ namespace HachigayoLab.UISync
     [InitializeOnLoad]
     public static class UISyncAutoBinder
     {
+        const string MenuPath = "Tools/UI Sync Auto Binder";
+
+        static bool Enabled
+        {
+            get => EditorPrefs.GetBool(MenuPath, true);
+            set => EditorPrefs.SetBool(MenuPath, value);
+        }
+
         static UISyncAutoBinder()
         {
             EditorApplication.hierarchyChanged += OnHierarchyChanged;
+            EditorApplication.delayCall += UpdateMenuCheck;
+        }
+
+        [MenuItem(MenuPath)]
+        static void Toggle()
+        {
+            Enabled = !Enabled;
+            UpdateMenuCheck();
+
+            Debug.Log($"[UISyncAutoBinder] Enabled = {Enabled}");
+        }
+
+        [MenuItem(MenuPath, true)]
+        static bool ToggleValidate()
+        {
+            Menu.SetChecked(MenuPath, Enabled);
+            return true;
+        }
+
+        static void UpdateMenuCheck()
+        {
+            Menu.SetChecked(MenuPath, Enabled);
         }
 
         static void OnHierarchyChanged()
         {
+            if (!Enabled) return;
+
             var gameObject = Selection.activeGameObject;
             if (gameObject == null) return;
 

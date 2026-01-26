@@ -27,7 +27,7 @@ namespace HachigayoLab.CameraReflector
         Transform baseCameraLTransform, baseCameraRTransform, baseCameraPTransform;
         bool isUserInVR, screenChanged = true, photoChanged = true;
         bool[] flip;
-        int idMirror, idNumber, idTarget, idTextureB, idDepth0, idDepth1, idDepth2, streamWidth, streamHeight, currentCamera = -2, enabledCameraCount, number, target;
+        int idMirror, idNumber, idTarget, idTextureB, idDepth0, idDepth1, idDepth2, streamWidth = 1280, streamHeight = 720, currentCamera = -2, enabledCameraCount, number, target;
         int[] enabledCameraIndices;
         VRCCameraSettings screenCamera, photoCamera;
         Matrix4x4 projectionL, projectionR, projectionP;
@@ -39,7 +39,7 @@ namespace HachigayoLab.CameraReflector
             screenCamera.DepthTextureMode = DepthTextureMode.Depth;
             photoCamera.DepthTextureMode = DepthTextureMode.Depth;
             isUserInVR = Networking.LocalPlayer.IsUserInVR();
-            textureB = new RenderTexture(screenCamera.PixelWidth, screenCamera.PixelHeight, 32);
+            textureB = new RenderTexture(1, 1, 32);
             VRCShader.SetGlobalTexture(idTextureB = VRCShader.PropertyToID("_UdonTextureB"), textureB);
             textureL = new RenderTexture(textureB.descriptor);
             VRCShader.SetGlobalTexture(VRCShader.PropertyToID("_UdonTextureL"), textureL);
@@ -52,7 +52,7 @@ namespace HachigayoLab.CameraReflector
             VRCShader.SetGlobalTexture(idDepth1 = VRCShader.PropertyToID("_UdonDepth1"), depth1);
             depth2 = new RenderTexture(depth0.descriptor);
             VRCShader.SetGlobalTexture(idDepth2 = VRCShader.PropertyToID("_UdonDepth2"), depth2);
-            texturePB = new RenderTexture(photoCamera.PixelWidth, photoCamera.PixelHeight, 32);
+            texturePB = new RenderTexture(1, 1, 32);
             textureP = new RenderTexture(texturePB.descriptor);
             VRCShader.SetGlobalTexture(VRCShader.PropertyToID("_UdonTextureP"), textureP);
             depthP0 = new RenderTexture(texturePB.descriptor);
@@ -70,7 +70,7 @@ namespace HachigayoLab.CameraReflector
             integratePhoto = transform.Find("IntegratePhoto").gameObject;
             integratePhoto.SetActive(true);
 
-            gameObject = transform.Find("DepthBase").gameObject;
+            gameObject = transform.Find("TextureBase").gameObject;
             gameObject.SetActive(true);
             gameObject.layer = depthBaseLayer;
 
@@ -123,8 +123,7 @@ namespace HachigayoLab.CameraReflector
                 else if (i < cameraCount * 2) cam.enabled = isUserInVR;
                 cam.depth = -(cameraCount + 1) * 3 + 1 + i % cameraCount + i / cameraCount * (cameraCount + 1) + cameraDepthOffset;
                 cam.cullingMask = /*baseCameraL.cullingMask ^ ((1 << 10) | (1 << 18))*/ (1 << 9) | (1 << 18) | (1 << depthBaseLayer);
-                cam.clearFlags = CameraClearFlags.SolidColor;
-                cam.backgroundColor = Color.clear;
+                cam.clearFlags = CameraClearFlags.Nothing;
                 cam.depthTextureMode = DepthTextureMode.Depth;
                 if (i % cameraCount % 2 == 0) cam.targetTexture = textureB;
                 else if (i < cameraCount) cam.targetTexture = textureL;
@@ -181,7 +180,7 @@ namespace HachigayoLab.CameraReflector
             {
                 photoChanged = false;
 
-                int w = 0; int h = 0;
+                int w = 1; int h = 1;
                 switch (PhotoResolution)
                 {
                     case PhotoResolutionMode._Stream: w = streamWidth; h = streamHeight; break;
@@ -276,6 +275,7 @@ namespace HachigayoLab.CameraReflector
                     VRCShader.SetGlobalTexture(idDepth2, depthP2);
                 }
                 currentCamera = -1;
+                VRCShader.SetGlobalFloat(idTarget, target = t);
             }
             else
             {
@@ -294,7 +294,6 @@ namespace HachigayoLab.CameraReflector
 
             VRCShader.SetGlobalFloat(idMirror, flip[enabledCameraIndices[currentCamera + 1]] ^ flip[enabledCameraIndices[currentCamera + 2]] ? 1 : 0);
             VRCShader.SetGlobalFloat(idNumber, number = n == -1 ? -1 : (enabledCameraCount - currentCamera) % 2);
-            VRCShader.SetGlobalFloat(idTarget, target = t);
         }
 
         void OnRenderObject()

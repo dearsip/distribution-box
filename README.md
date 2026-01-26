@@ -83,7 +83,8 @@ uGUIコンポーネント（Toggle、TMP_Dropdown、TMP_InputField、Slider）�
 
 `UISyncSliderLinear`は、Sliderの同期を線形補完したい（`UdonSyncMode.Linear`を使用したい）場合に`UISyncSlider`の代わりにアタッチします。
 
-`Editor/UISyncAutoBinder`は、各コンポーネントにUdonBehaviourがアタッチされたとき、`UdonBehaviour.SendCustomEvent(OnValueChanged)`を自動で追加します。これはコンポーネントの値を同期変数に反映するための処理です。他のUdonBehaviourがアタッチされている場合、意図しない動作をする可能性があります。動作に問題がある場合は、`Editor/UISyncAutoBinder`を削除して自身で追加を行ってください。
+`Editor/UISyncAutoBinder`は、各コンポーネントにUdonBehaviourがアタッチされたとき、`UdonBehaviour.SendCustomEvent(OnValueChanged)`を自動で追加します。これはコンポーネントの値を同期変数に反映するための処理です。  
+他のUdonBehaviourがアタッチされている場合、意図しない動作をする可能性があります。動作に問題がある場合は、メニューバーの`Tools/UI Sync Auto Binder`を選択することで停止できます。
 
 VRChatでのuGUIの使用については[ドキュメント](https://creators.vrchat.com/worlds/components/vrc_uishape/)を参照してください。基本的には`UI/Text - TextMeshPro (VRC)`の追加と、各コンポーネントの`Navigation`を`None`にすること（加えてScroll barがある場合は`Scroll Sensitivity`を0にすること）で正常に機能するようになります。Sceneビュー上に表示されるアイコンはSceneビュー右上の"Toggle visibility of all Gizmos in the Scene view"でオフにできます。
 

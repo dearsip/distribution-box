@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DepthBase
+  m_Name: TextureBase
   m_Shader: {fileID: 4800000, guid: 1af3f84509dd760498176ec5a23d51dd, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
