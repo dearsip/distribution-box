@@ -86,7 +86,7 @@ uGUIコンポーネント（Toggle、TMP_Dropdown、TMP_InputField、Slider）�
 `Editor/UISyncAutoBinder`は、各コンポーネントにUdonBehaviourがアタッチされたとき、`UdonBehaviour.SendCustomEvent(OnValueChanged)`を自動で追加します。これはコンポーネントの値を同期変数に反映するための処理です。  
 他のUdonBehaviourがアタッチされている場合、意図しない動作をする可能性があります。動作に問題がある場合は、メニューバーの`Tools/UI Sync Auto Binder`を選択することで停止できます。
 
-VRChatでのuGUIの使用については[ドキュメント](https://creators.vrchat.com/worlds/components/vrc_uishape/)を参照してください。基本的には`UI/Text - TextMeshPro (VRC)`の追加と、各コンポーネントの`Navigation`を`None`にすること（加えてScroll barがある場合は`Scroll Sensitivity`を0にすること）で正常に機能するようになります。Sceneビュー上に表示されるアイコンはSceneビュー右上の"Toggle visibility of all Gizmos in the Scene view"でオフにできます。
+VRChatでのuGUIの使用については[ドキュメント](https://creators.vrchat.com/worlds/components/vrc_uishape/)を参照してください。基本的には`UI/Text - TextMeshPro (VRC)`の追加と、各コンポーネントの`Navigation`を`None`にすること（加えてScroll barがある場合は`Scroll Sensitivity`を0にすること）で正常に機能するようになります。Sceneビュー上に表示されるアイコンはSceneビュー右上の"Toggle visibility of all Gizmos in the Scene view"でオフにできます。また、日本語を含むFont Assetは[TextMesh Pro VRC Fallback Font JP](https://github.com/Narazaka/tmp-fallback-fonts-jp)で簡易に設定できます。
 
 ## Camera Reflector
 
@@ -95,7 +95,8 @@ VRChatでのuGUIの使用については[ドキュメント](https://creators.vr
 反転を含むカメラで深度バッファを参照しながらスクリーンを上書きするワールド用ギミックです。（PC Only）
 
 ポリゴンの表裏は反転（鏡映変換）によって入れ替わります。そのため、カメラの変換行列が鏡映変換を含む場合、`GL.invertCulling=true`によって表裏判定を補正する必要があります。しかし、現在のVRChatでは`GL.invertCulling`にアクセスすることができません。代替として、変換行列を反転させてから描画し、描画結果をさらに反転させることで、求める結果を得ることができます。  
-ところで、複数のカメラで同じレンダーターゲットを指定することで、先のカメラの深度バッファを参照しながら後のカメラの描画を重ねることができます。そして、例えば2台のカメラでの描画において後のカメラのみ反転を含む場合、上記の代替手法を適用するには、先のカメラでの描画結果及び深度バッファを後のカメラのために反転させる必要があります。本ギミックはそのような処理を実装したものです。
+ところで、複数のカメラで同じレンダーターゲットを指定することで、先のカメラの深度バッファを参照しながら後のカメラの描画を重ねることができます。そして、例えば2台のカメラでの描画において後のカメラのみ反転を含む場合、上記の代替手法を適用するには、先のカメラでの描画結果及び深度バッファを後のカメラのために反転させる必要があります。本ギミックはそのような処理を実装したものです。  
+Client Simulator上では動作しないため、動作確認はBuildして行ってください。
 
 `CameraReflector.prefab`は、ワールド内のアバターをオブジェクトの位置からz軸方向に反転させて描画します。異なる用途で用いるには`CameraReflector.cs`を編集する必要があります。
 
@@ -106,3 +107,19 @@ VRChatでのuGUIの使用については[ドキュメント](https://creators.vr
 - `Photo Resolution`: Photo Cameraに使用するテクスチャの解像度を指定する。`Stream`はStream Cameraの解像度、すなわちウィンドウサイズに対応する。本ギミックの描画結果は標準のPhoto Cameraには映るがその他のカメラや鏡には映らない。また、指定した解像度でのレンダリングはPhoto Cameraを表示している間毎フレーム実行される。
 
 [こちらのワールド](https://vrchat.com/home/launch?worldId=wrld_dc61c604-638c-4832-9136-d7438a823b2e)にサンプルを設置しています。（`CameraReflectorSample.unity`とほぼ同一）
+
+## Orthogonal Mirror
+
+[OrthogonalMirror.unitypackage](https://github.com/dearsip/distribution-box/raw/main/OrthogonalMirror.unitypackage)
+
+近づいて見ても粗くならない直交投影映像を描画するワールド用ギミックです。
+
+カメラの映像をレンダーテクスチャとして撮影してメッシュに描画する場合、メッシュのuv座標に合わせて撮影・描画すると、近づくほどスクリーンに対してテクスチャが引き伸ばされ粗く描画されます。一方、スクリーンに合わせて撮影したテクスチャをメッシュでクリッピングする形で描画することで、どのような位置からも最適な画質で描画できます。VRCMirrorのように撮影カメラの位置がスクリーンカメラと関連するギミックでは後者の実装の方がむしろ自然ですが、撮影カメラが直交投影の場合後者の実装は困難です。本ギミックは特殊な透視投影行列を用いてそのような処理を実装しました。  
+Client Simulator上では動作しないため、動作確認はBuildして行ってください。
+
+- `Mirror`: オンのときは、`OrthogonalMirror.prefab`の手前の領域を鏡映して描画する。オフのときは、`OrthogonalMirror.prefab`の奥の領域をそのまま描画する。
+- `Min Depth`: 描画する奥行き（Positionの反対側の境界までの距離）の最小値。本ギミックは用いている行列の都合で奥行きが一定にならない。
+
+描画レイヤーやクリアフラグは`ReferenceCamera.prefab`から設定できます。また、`OrthogonalMirror.shader`を編集することで透過などの設定ができます。
+
+[こちらのワールド](https://vrchat.com/home/launch?worldId=wrld_63d2d63f-3ddc-4b40-ba9e-5e6ba8ab6681)にサンプルを設置しています。（`OrthogonalMirrorSample.unity`と同一）
