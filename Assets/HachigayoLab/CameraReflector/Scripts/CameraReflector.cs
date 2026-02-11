@@ -1,5 +1,6 @@
 ﻿
 using UdonSharp;
+using Unity.Mathematics;
 using UnityEngine;
 using VRC.SDK3.Rendering;
 using VRC.SDKBase;
@@ -283,9 +284,10 @@ namespace HachigayoLab.CameraReflector
                 // calculate projection matrix
                 Matrix4x4 pj =
                     (t == 0 ? projectionL : t == 1 ? projectionR : projectionP)
-                    * Matrix4x4.Scale(new Vector3(1, 1, -1)) // projection space -> view space
+                    * Matrix4x4.Scale(new Vector3(1, 1, -1)) // view space -> projection space
                     * Matrix4x4.Rotate(Quaternion.Inverse(t == 0 ? VRCCameraSettings.GetEyeRotation(Camera.StereoscopicEye.Left) : t == 1 ? VRCCameraSettings.GetEyeRotation(Camera.StereoscopicEye.Right) : photoCamera.Rotation))
-                    * Matrix4x4.Translate(-(t == 0 ? VRCCameraSettings.GetEyePosition(Camera.StereoscopicEye.Left) : t == 1 ? VRCCameraSettings.GetEyePosition(Camera.StereoscopicEye.Right) : photoCamera.Position))
+                    * Matrix4x4.Translate(transform.position - (t == 0 ? VRCCameraSettings.GetEyePosition(Camera.StereoscopicEye.Left) : t == 1 ? VRCCameraSettings.GetEyePosition(Camera.StereoscopicEye.Right) : photoCamera.Position))
+                    * Matrix4x4.Rotate(transform.rotation)
                     ; // mirror reflection * (projection space -> view space)
                 if (flip[n + 1]) { pj[0, 0] = -pj[0, 0]; pj[0, 1] = -pj[0, 1]; pj[0, 2] = -pj[0, 2]; pj[0, 3] = -pj[0, 3]; } // flip row 0
                 cameras[n + t * cameraCount].projectionMatrix = pj;

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: CameraReflector
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: f91708d38a4d3d748b3964263b4cbbd0, type: 2}
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 15a953a5e327b4544a60cb434600dae3, type: 2}
   udonAssembly: 
   assemblyError: 
   sourceCsScript: {fileID: 11500000, guid: 20be2159c68462143b80981716e4c6b9, type: 3}

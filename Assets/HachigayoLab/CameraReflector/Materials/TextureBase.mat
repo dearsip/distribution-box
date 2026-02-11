@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TextureBase
-  m_Shader: {fileID: 4800000, guid: 1af3f84509dd760498176ec5a23d51dd, type: 3}
+  m_Shader: {fileID: 4800000, guid: d053e2ffa41b303488a878715b78b824, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
