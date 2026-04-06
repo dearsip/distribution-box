@@ -9,6 +9,7 @@ Shader "HachigayoLab/DiffractionSimulator/RayOut" {
   SubShader {
     Tags {"RenderType"="Opaque"}
     LOD 100
+    Cull Off
 
     Pass {
       CGPROGRAM

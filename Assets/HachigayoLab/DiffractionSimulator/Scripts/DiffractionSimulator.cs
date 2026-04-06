@@ -13,9 +13,9 @@ namespace HachigayoLab.DiffractionSimulator
         [SerializeField] GameObject crystalPrefab, rayInPrefab, rayOutPrefab, planePrefab;
         [SerializeField] float lConst = 5.43f, lambda = 1.54f;
         [SerializeField] Slider thickness, region, scale, plane;
-        [SerializeField] Toggle diamond;
+        [SerializeField] Toggle diamond, tube;
         float fPlane;
-        bool bDiamond;
+        bool bDiamond, bTube = true;
         [SerializeField]
         Vector3[] coords = new Vector3[]
         {
@@ -35,6 +35,7 @@ namespace HachigayoLab.DiffractionSimulator
         SyncRot crystal;
         Matrix4x4 axis;
         GameObject[] lattice, planes;
+        GameObject tubeIn, tubeOut;
         void Start()
         {
             axis = new Matrix4x4(new Vector4(lConst, 0, 0, 0), new Vector4(0, lConst, 0, 0), new Vector4(0, 0, lConst, 0), new Vector4(0, 0, 0, 1));
@@ -43,6 +44,8 @@ namespace HachigayoLab.DiffractionSimulator
             rayOutT = transform.Find("RayOut");
             dirInT = transform.Find("DirIn");
             dirOutT = transform.Find("DirOut");
+            tubeIn = rayInT.Find("Tube").gameObject;
+            tubeOut = rayOutT.Find("Tube").gameObject;
             crystal = crystalT.GetComponent<SyncRot>();
             dirIn = dirInT.GetComponent<SyncPos>();
             dirOut = dirOutT.GetComponent<SyncPos>();
@@ -69,7 +72,7 @@ namespace HachigayoLab.DiffractionSimulator
             }
             for (int i = 3; i < lattice.Length; i++) lattice[i].SetActive(false);
             planeT = transform.Find("Plane");
-            planes = new GameObject[4];
+            planes = new GameObject[5];
             planeTs = new Transform[planes.Length];
             for (int i = 0; i < planes.Length; i++)
             {
@@ -118,6 +121,12 @@ namespace HachigayoLab.DiffractionSimulator
             {
                 bDiamond = diamond.isOn;
                 for (int i = 3; i < lattice.Length; i++) lattice[i].SetActive(bDiamond);
+            }
+            if (Utilities.IsValid(tube) && (tube.isOn != bTube))
+            {
+                bTube = tube.isOn;
+                tubeIn.SetActive(bTube);
+                tubeOut.SetActive(bTube);
             }
         }
 

@@ -10,7 +10,7 @@ namespace HachigayoLab.DiffractionSimulator
     {
         [SerializeField] string shapeName;
         [SerializeField] int resolution = 2, scale = 7;
-        [SerializeField] float radius = .5f;
+        [SerializeField] float radius = .5f, radius2 = 10;
 
         void Sphere()
         {
@@ -113,6 +113,14 @@ namespace HachigayoLab.DiffractionSimulator
                 vertices.Add(v);
             }
 
+            for (int i = 0; i < resolution; i++)
+            {
+                Vector3 v = new Vector3(Mathf.Cos(t * i * .5f) * radius2, Mathf.Sin(t * i * .5f) * radius2, 1) * radius;
+                vertices.Add(v);
+                v = new Vector3(Mathf.Cos(t * (2 * resolution - 1 - i) * .5f) * radius2, Mathf.Sin(t * (2 * resolution - 1 - i) * .5f) * radius2, 1) * radius;
+                vertices.Add(v);
+            }
+
             for (int i = 0; i < resolution - 1; i++)
             {
                 triangles.Add(i * 2);
@@ -130,6 +138,17 @@ namespace HachigayoLab.DiffractionSimulator
             triangles.Add(resolution * 2 - 2);
             triangles.Add(0);
             triangles.Add(1);
+
+            for (int i = 0; i < resolution - 1; i++)
+            {
+                triangles.Add(resolution * 2 + i * 2);
+                triangles.Add(resolution * 2 + i * 2 + 1);
+                triangles.Add(resolution * 2 + i * 2 + 3);
+
+                triangles.Add(resolution * 2 + i * 2);
+                triangles.Add(resolution * 2 + i * 2 + 3);
+                triangles.Add(resolution * 2 + i * 2 + 2);
+            }
 
             mesh.SetVertices(vertices);
             mesh.SetTriangles(triangles, 0);
@@ -160,6 +179,53 @@ namespace HachigayoLab.DiffractionSimulator
             AssetDatabase.CreateAsset(mesh, "Assets/" + shapeName + ".asset");
         }
 
+        void OneTube()
+        {
+            Mesh mesh = new Mesh();
+            mesh.name = shapeName;
+
+            List<Vector3> vertices = new List<Vector3>();
+            List<Vector2> uvs = new List<Vector2>();
+            List<int> triangles = new List<int>();
+
+            float t = 2 * Mathf.PI / resolution;
+            for (int i = 0; i < resolution; i++)
+            {
+                Vector3 v = new Vector3(Mathf.Cos(t * i), Mathf.Sin(t * i), 0) * radius;
+                vertices.Add(v);
+                uvs.Add(new Vector2(i % 2, 0));
+                v.z = radius;
+                vertices.Add(v);
+                uvs.Add(new Vector2(i % 2, 1));
+            }
+
+            for (int i = 0; i < resolution - 1; i++)
+            {
+                triangles.Add(i * 2);
+                triangles.Add(i * 2 + 3);
+                triangles.Add(i * 2 + 1);
+
+                triangles.Add(i * 2);
+                triangles.Add(i * 2 + 2);
+                triangles.Add(i * 2 + 3);
+            }
+            triangles.Add(resolution * 2 - 2);
+            triangles.Add(1);
+            triangles.Add(resolution * 2 - 1);
+
+            triangles.Add(resolution * 2 - 2);
+            triangles.Add(0);
+            triangles.Add(1);
+
+            mesh.SetVertices(vertices);
+            mesh.SetTriangles(triangles, 0);
+            mesh.SetUVs(0, uvs);
+            mesh.RecalculateNormals();
+            mesh.bounds = new Bounds(Vector3.zero, Vector3.one * 1000);
+
+            AssetDatabase.CreateAsset(mesh, "Assets/" + shapeName + ".asset");
+        }
+
         [CustomEditor(typeof(MeshCreator))]
         public class MeshCreatorEditor : Editor
         {
@@ -167,16 +233,25 @@ namespace HachigayoLab.DiffractionSimulator
             {
                 DrawDefaultInspector();
 
+                // shapeName = "Crystal", resolution = 3, scale = 7, radius = 1
                 if (GUILayout.Button("Sphere"))
                 {
                     MeshCreator targetScript = (MeshCreator)target;
                     targetScript.Sphere();
                 }
 
+                // shapeName = "Ray", resolution = 8, scale = 7, radius = 0.5f, radius2 = 10
                 if (GUILayout.Button("Tube"))
                 {
                     MeshCreator targetScript = (MeshCreator)target;
                     targetScript.Tube();
+                }
+
+                // shapeName = "Tube", resolution = 16, radius = 0.5f
+                if (GUILayout.Button("OneTube"))
+                {
+                    MeshCreator targetScript = (MeshCreator)target;
+                    targetScript.OneTube();
                 }
             }
         }
